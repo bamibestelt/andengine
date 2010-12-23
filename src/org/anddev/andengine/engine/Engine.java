@@ -556,12 +556,13 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 		
 		//mThreadLocker.waitUntilCanDraw();
 		
+		pGL.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
+		
 		//this.mTextureManager.updateTextures(pGL);
 		this.mFontManager.updateFonts(pGL);
 		if(GLHelper.EXTENSIONS_VERTEXBUFFEROBJECTS) {
 			this.mBufferObjectManager.updateBufferObjects((GL11) pGL);
 		}
-
 		
 		//final long t3 = System.nanoTime();
 		this.onDrawScene(pGL);

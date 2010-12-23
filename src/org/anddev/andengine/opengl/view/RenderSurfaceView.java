@@ -123,10 +123,10 @@ public class RenderSurfaceView extends GLSurfaceView {
 			GLHelper.setPerspectiveCorrectionHintFastest(pGL);
 			//			pGL.glEnable(GL10.GL_POLYGON_SMOOTH);
 			//			pGL.glHint(GL10.GL_POLYGON_SMOOTH_HINT, GL10.GL_NICEST);
-			//			pGL.glEnable(GL10.GL_LINE_SMOOTH);
-			//			pGL.glHint(GL10.GL_LINE_SMOOTH_HINT, GL10.GL_NICEST);
-			//			pGL.glEnable(GL10.GL_POINT_SMOOTH);
-			//			pGL.glHint(GL10.GL_POINT_SMOOTH_HINT, GL10.GL_NICEST);
+			//pGL.glEnable(GL10.GL_LINE_SMOOTH);
+			//pGL.glHint(GL10.GL_LINE_SMOOTH_HINT, GL10.GL_NICEST);
+			pGL.glEnable(GL10.GL_POINT_SMOOTH);
+			pGL.glHint(GL10.GL_POINT_SMOOTH_HINT, GL10.GL_NICEST);
 
 			GLHelper.setShadeModelFlat(pGL);
 
