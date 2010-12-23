@@ -16,7 +16,7 @@ import org.anddev.andengine.collision.RectangularShapeCollisionChecker;
 import org.anddev.andengine.engine.camera.Camera;
 import org.anddev.andengine.entity.layer.tiled.tmx.TMXLoader.ITMXTilePropertiesListener;
 import org.anddev.andengine.entity.layer.tiled.tmx.util.constants.TMXConstants;
-import org.anddev.andengine.entity.shape.RectangularShape;
+import org.anddev.andengine.entity.shape.BoundingBoxShape;
 import org.anddev.andengine.opengl.texture.region.TextureRegion;
 import org.anddev.andengine.opengl.util.GLHelper;
 import org.anddev.andengine.opengl.vertex.RectangleVertexBuffer;
@@ -31,7 +31,7 @@ import org.xml.sax.Attributes;
  * @author Nicolas Gramlich
  * @since 20:27:31 - 20.07.2010
  */
-public class TMXLayer extends RectangularShape implements TMXConstants {
+public class TMXLayer extends BoundingBoxShape implements TMXConstants {
 	// ===========================================================
 	// Constants
 	// ===========================================================

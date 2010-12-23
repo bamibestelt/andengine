@@ -3,7 +3,7 @@ package org.anddev.andengine.collision;
 import static org.anddev.andengine.util.constants.Constants.VERTEX_INDEX_X;
 import static org.anddev.andengine.util.constants.Constants.VERTEX_INDEX_Y;
 
-import org.anddev.andengine.entity.shape.RectangularShape;
+import org.anddev.andengine.entity.shape.BoundingBoxShape;
 import org.anddev.andengine.util.MathUtils;
 
 /**
@@ -41,12 +41,12 @@ public class RectangularShapeCollisionChecker extends ShapeCollisionChecker {
 	// Methods
 	// ===========================================================
 
-	public static boolean checkContains(final RectangularShape pRectangularShape, final float pX, final float pY) {
+	public static boolean checkContains(final BoundingBoxShape pRectangularShape, final float pX, final float pY) {
 		RectangularShapeCollisionChecker.fillVertices(pRectangularShape, VERTICES_CONTAINS_TMP);
 		return ShapeCollisionChecker.checkContains(VERTICES_CONTAINS_TMP, 2 * RECTANGULARSHAPE_VERTEX_COUNT, pX, pY);
 	}
 
-	public static boolean checkCollision(final RectangularShape pRectangularShapeA, final RectangularShape pRectangularShapeB) {
+	public static boolean checkCollision(final BoundingBoxShape pRectangularShapeA, final BoundingBoxShape pRectangularShapeB) {
 		if(pRectangularShapeA.getRotation() == 0 && pRectangularShapeB.getRotation() == 0 && pRectangularShapeA.isScaled() == false && pRectangularShapeB.isScaled() == false) {
 			final float aLeft = pRectangularShapeA.getX();
 			final float aTop = pRectangularShapeA.getY();
@@ -62,7 +62,7 @@ public class RectangularShapeCollisionChecker extends ShapeCollisionChecker {
 		}
 	}
 
-	public static void fillVertices(final RectangularShape pRectangularShape, final float[] pVertices) {
+	public static void fillVertices(final BoundingBoxShape pRectangularShape, final float[] pVertices) {
 		final float left = pRectangularShape.getX();
 		final float top = pRectangularShape.getY();
 		final float right = pRectangularShape.getWidth() + left;

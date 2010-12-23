@@ -3,10 +3,6 @@ package org.anddev.andengine.entity.shape;
 import static org.anddev.andengine.util.constants.Constants.VERTEX_INDEX_X;
 import static org.anddev.andengine.util.constants.Constants.VERTEX_INDEX_Y;
 
-import java.nio.FloatBuffer;
-
-import javax.microedition.khronos.opengles.GL10;
-
 import org.anddev.andengine.collision.RectangularShapeCollisionChecker;
 import org.anddev.andengine.collision.ShapeCollisionChecker;
 import org.anddev.andengine.engine.camera.Camera;
@@ -17,7 +13,7 @@ import org.anddev.andengine.opengl.vertex.VertexBuffer;
  * @author Nicolas Gramlich
  * @since 11:37:50 - 04.04.2010
  */
-public abstract class RectangularShape extends GLShape {
+public abstract class BoundingBoxShape extends Shape {
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -38,7 +34,7 @@ public abstract class RectangularShape extends GLShape {
 	// Constructors
 	// ===========================================================
 
-	public RectangularShape(final float pX, final float pY, final float pWidth, final float pHeight, final VertexBuffer pVertexBuffer) {
+	public BoundingBoxShape(final float pX, final float pY, final float pWidth, final float pHeight, final VertexBuffer pVertexBuffer) {
 		super(pX, pY);
 
 		this.mBaseWidth = pWidth;
@@ -126,12 +122,6 @@ public abstract class RectangularShape extends GLShape {
 	}
 
 	@Override
-	protected void drawVertices(final GL10 pGL, final Camera pCamera) {
-		pGL.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, 4);
-		//pGL.glDrawElements(GL10.GL_TRIANGLE_STRIP, 4, GL10.GL_FLOAT, mVertexBuffer.getFloatBuffer().floatBuffer());
-	}
-
-	@Override
 	public void reset() {
 		super.reset();
 		this.setBaseSize();
@@ -174,8 +164,8 @@ public abstract class RectangularShape extends GLShape {
 
 	@Override
 	public boolean collidesWith(final IShape pOtherShape) {
-		if(pOtherShape instanceof RectangularShape) {
-			final RectangularShape pOtherRectangularShape = (RectangularShape) pOtherShape;
+		if(pOtherShape instanceof BoundingBoxShape) {
+			final BoundingBoxShape pOtherRectangularShape = (BoundingBoxShape) pOtherShape;
 
 			return RectangularShapeCollisionChecker.checkCollision(this, pOtherRectangularShape);
 		} else {

@@ -1,15 +1,17 @@
 package org.anddev.andengine.entity.primitive;
 
+import javax.microedition.khronos.opengles.GL10;
 import javax.microedition.khronos.opengles.GL11;
 
-import org.anddev.andengine.entity.shape.RectangularShape;
+import org.anddev.andengine.engine.camera.Camera;
+import org.anddev.andengine.entity.shape.BoundingBoxShape;
 import org.anddev.andengine.opengl.vertex.RectangleVertexBuffer;
 
 /**
  * @author Nicolas Gramlich
  * @since 19:05:49 - 11.04.2010
  */
-public abstract class BaseRectangle extends RectangularShape {
+public abstract class BaseRectangle extends BoundingBoxShape {
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -47,6 +49,11 @@ public abstract class BaseRectangle extends RectangularShape {
 	@Override
 	protected void onUpdateVertexBuffer(){
 		this.getVertexBuffer().update(this.mWidth, this.mHeight);
+	}
+	
+	@Override
+	protected void drawVertices(GL10 pGL, Camera pCamera) {
+		pGL.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, 4);
 	}
 
 	// ===========================================================

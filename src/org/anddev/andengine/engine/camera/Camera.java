@@ -9,7 +9,7 @@ import org.anddev.andengine.collision.BaseCollisionChecker;
 import org.anddev.andengine.engine.camera.hud.HUD;
 import org.anddev.andengine.engine.handler.IUpdateHandler;
 import org.anddev.andengine.entity.shape.IShape;
-import org.anddev.andengine.entity.shape.RectangularShape;
+import org.anddev.andengine.entity.shape.BoundingBoxShape;
 import org.anddev.andengine.input.touch.TouchEvent;
 import org.anddev.andengine.opengl.util.GLHelper;
 import org.anddev.andengine.util.MathUtils;
@@ -192,7 +192,7 @@ public class Camera implements IUpdateHandler {
 		}
 	}
 
-	public boolean isRectangularShapeVisible(final RectangularShape pRectangularShape) {
+	public boolean isRectangularShapeVisible(final BoundingBoxShape pRectangularShape) {
 		final float otherLeft = pRectangularShape.getX();
 		final float otherTop = pRectangularShape.getY();
 		final float otherRight = pRectangularShape.getWidthScaled() + otherLeft;

@@ -4,7 +4,7 @@ import javax.microedition.khronos.opengles.GL10;
 import javax.microedition.khronos.opengles.GL11;
 
 import org.anddev.andengine.engine.camera.Camera;
-import org.anddev.andengine.entity.shape.RectangularShape;
+import org.anddev.andengine.entity.shape.BoundingBoxShape;
 import org.anddev.andengine.opengl.buffer.BufferObjectManager;
 import org.anddev.andengine.opengl.font.Font;
 import org.anddev.andengine.opengl.font.Letter;
@@ -18,7 +18,7 @@ import org.anddev.andengine.util.StringUtils;
  * @author Nicolas Gramlich
  * @since 10:54:59 - 03.04.2010
  */
-public class Text extends RectangularShape {
+public class Text extends BoundingBoxShape {
 	// ===========================================================
 	// Constants
 	// ===========================================================

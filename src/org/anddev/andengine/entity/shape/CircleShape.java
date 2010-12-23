@@ -6,7 +6,7 @@ import org.anddev.andengine.engine.camera.Camera;
 import org.anddev.andengine.opengl.buffer.BufferObjectManager;
 import org.anddev.andengine.opengl.vertex.VertexBuffer;
 
-public abstract class CircleShape extends GLShape {
+public abstract class CircleShape extends Shape {
 	private float mCenterX;
 	private float mCenterY;
 	private float mBaseRadius;

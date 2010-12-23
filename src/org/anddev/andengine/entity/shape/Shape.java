@@ -1,13 +1,18 @@
 package org.anddev.andengine.entity.shape;
 
 import javax.microedition.khronos.opengles.GL10;
+import javax.microedition.khronos.opengles.GL11;
 
 import org.anddev.andengine.engine.camera.Camera;
 import org.anddev.andengine.entity.Entity;
 import org.anddev.andengine.input.touch.TouchEvent;
 import org.anddev.andengine.opengl.util.GLHelper;
+import org.anddev.andengine.opengl.vertex.VertexBuffer;
 import org.anddev.andengine.util.modifier.IModifier;
 import org.anddev.andengine.util.modifier.ModifierList;
+
+import com.badlogic.gdx.math.Matrix3;
+import com.badlogic.gdx.math.Vector2;
 
 /**
  * @author Nicolas Gramlich
@@ -68,6 +73,10 @@ public abstract class Shape extends Entity implements IShape {
 	private boolean mCullingEnabled = false;
 	
 	private boolean mInitialized = false;
+	
+	private final Matrix3 transformMatrix = new Matrix3();
+	private final Matrix3 tmpMatrix = new Matrix3();
+	private final Vector2 mPos = new Vector2();
 
 	// ===========================================================
 	// Constructors
@@ -431,8 +440,25 @@ public abstract class Shape extends Entity implements IShape {
 
 	}
 
-	protected abstract void onApplyVertices(final GL10 pGL);
 	protected abstract void drawVertices(final GL10 pGL, final Camera pCamera);
+	protected abstract void onUpdateVertexBuffer();
+	protected abstract VertexBuffer getVertexBuffer();
+	
+	protected void updateVertexBuffer() {
+		this.onUpdateVertexBuffer();
+	}
+	
+	protected void onApplyVertices(final GL10 pGL) {
+		if(GLHelper.EXTENSIONS_VERTEXBUFFEROBJECTS) {
+			final GL11 gl11 = (GL11)pGL;
+
+			this.getVertexBuffer().selectOnHardware(gl11);
+			
+			gl11.glVertexPointer(2, GL10.GL_FLOAT, 0, 0);
+		} else {
+			GLHelper.vertexPointer(pGL, this.getVertexBuffer().getFloatBuffer());
+		}
+	}
 
 	@Override
 	protected void onManagedUpdate(final float pSecondsElapsed) {
@@ -469,7 +495,25 @@ public abstract class Shape extends Entity implements IShape {
 		if(this.mCullingEnabled == false || this.isCulled(pCamera) == false) {
 			
 			this.onInitDraw(pGL);
-
+			this.onApplyVertices(pGL);
+			pGL.glTranslatef(this.mX, this.mY, 0);
+			this.drawVertices(pGL, pCamera);
+			
+			// Set to identity matrix
+			/*
+			transformMatrix.idt();
+			transformMatrix.setToTranslation(this.mX, this.mY);
+			
+			transformMatrix.mul(tmpMatrix.setToScaling(this.mScaleX, this.mScaleY));
+			transformMatrix.mul(tmpMatrix.setToRotation(this.mRotation));
+			
+			mPos.x = mX;
+			mPos.y = mY;
+			
+			mPos.mul(transformMatrix);
+			*/
+			
+			/*
 			pGL.glPushMatrix();
 			{
 				this.onApplyVertices(pGL);
@@ -477,6 +521,7 @@ public abstract class Shape extends Entity implements IShape {
 				this.drawVertices(pGL, pCamera);
 			}
 			pGL.glPopMatrix();
+			*/
 		}
 	}
 
@@ -497,52 +542,12 @@ public abstract class Shape extends Entity implements IShape {
 			pGL.glTranslatef(-this.mRotationCenterX, -this.mRotationCenterY, 0);
 		}
 
-
 		if(this.mScaleX != 1 || this.mScaleY != 1) {
 			pGL.glTranslatef(this.mScaleCenterX, this.mScaleCenterY, 0);
 			pGL.glScalef(this.mScaleX, this.mScaleY, 1);
 			pGL.glTranslatef(-this.mScaleCenterX, -this.mScaleCenterY, 0);
 		}
-		
-		//this.applyTranslation(pGL);
-
-		//this.applyRotation(pGL);
-
-		//this.applyScale(pGL);
 	}
-
-	/*
-	protected void applyTranslation(final GL10 pGL) {
-		pGL.glTranslatef(this.mX, this.mY, 0);
-	}
-
-	protected void applyRotation(final GL10 pGL) {
-		final float rotation = this.mRotation;
-
-		if(rotation != 0) {
-			final float rotationCenterX = this.mRotationCenterX;
-			final float rotationCenterY = this.mRotationCenterY;
-
-			//pGL.glTranslatef(rotationCenterX, rotationCenterY, 0);
-			pGL.glRotatef(rotation, this.mX + rotationCenterX, this.mY + rotationCenterY, 1);
-			//pGL.glTranslatef(-rotationCenterX, -rotationCenterY, 0);
-		}
-	}
-
-	protected void applyScale(final GL10 pGL) {
-		final float scaleX = this.mScaleX;
-		final float scaleY = this.mScaleY;
-
-		if(scaleX != 1 || scaleY != 1) {
-			final float scaleCenterX = this.mScaleCenterX;
-			final float scaleCenterY = this.mScaleCenterY;
-
-			pGL.glTranslatef(scaleCenterX, scaleCenterY, 0);
-			pGL.glScalef(scaleX, scaleY, 1);
-			pGL.glTranslatef(-scaleCenterX, -scaleCenterY, 0);
-		}
-	}
-	*/
 
 	@Override
 	public void reset() {
