@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/1241/trunk/gdx/jni/gdx2d
+END
+stb_truetype.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/896/trunk/gdx/jni/gdx2d/stb_truetype.h
+END
+Android.mk
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1241/trunk/gdx/jni/gdx2d/Android.mk
+END
+Gdx2DPixmap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1234/trunk/gdx/jni/gdx2d/Gdx2DPixmap.cpp
+END
+gdx2d.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/1238/trunk/gdx/jni/gdx2d/gdx2d.c
+END
+stb_image.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1237/trunk/gdx/jni/gdx2d/stb_image.c
+END
+Gdx2DPixmap.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1233/trunk/gdx/jni/gdx2d/Gdx2DPixmap.h
+END
+gdx2d.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/1233/trunk/gdx/jni/gdx2d/gdx2d.h
+END

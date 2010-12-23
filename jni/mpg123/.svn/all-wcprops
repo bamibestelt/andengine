@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1172/trunk/gdx/jni/mpg123
+END
+libmpg123.a
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/libmpg123.a
+END
+layer2.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/layer2.c
+END
+frame.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/frame.h
+END
+layer3.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/layer3.c
+END
+libmpg123.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/libmpg123.c
+END
+optimize.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/optimize.c
+END
+optimize.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/optimize.h
+END
+index.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/index.c
+END
+reader.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/reader.h
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/config.h
+END
+index.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/index.h
+END
+l2tables.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/l2tables.h
+END
+id3.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/id3.c
+END
+synth_arm.S
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/synth_arm.S
+END
+id3.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/id3.h
+END
+dct64.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/dct64.c
+END
+readers.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/readers.c
+END
+sample.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/sample.h
+END
+decode.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/decode.h
+END
+tabinit.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/tabinit.c
+END
+l3_integer_tables.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/l3_integer_tables.h
+END
+synths.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/synths.h
+END
+equalizer.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/equalizer.c
+END
+synth_mono.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/synth_mono.h
+END
+synth.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/synth.c
+END
+Android.mk
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1172/trunk/gdx/jni/mpg123/Android.mk
+END
+getbits.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/getbits.h
+END
+synth_ntom.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/synth_ntom.h
+END
+mangle.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/mangle.h
+END
+synth.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/synth.h
+END
+l12_integer_tables.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/l12_integer_tables.h
+END
+parse.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/parse.c
+END
+ntom.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/ntom.c
+END
+mpg123.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/mpg123.h
+END
+parse.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/parse.h
+END
+mpg123lib_intern.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/mpg123lib_intern.h
+END
+true.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/true.h
+END
+format.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/format.c
+END
+compat.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/compat.h
+END
+huffman.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/huffman.h
+END
+frame.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/frame.c
+END
+layer1.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/154/trunk/gdx/jni/mpg123/layer1.c
+END

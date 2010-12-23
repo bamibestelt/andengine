@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1049/trunk/gdx/jni/vorbis
+END
+config_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/config_types.h
+END
+block.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/block.h
+END
+misc.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/misc.h
+END
+floor0.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/floor0.c
+END
+floor1.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/floor1.c
+END
+registry.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/registry.c
+END
+os_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/os_types.h
+END
+mapping0.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/mapping0.c
+END
+registry.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/registry.h
+END
+codec_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/codec_internal.h
+END
+backends.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/backends.h
+END
+ivorbisfile.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/ivorbisfile.h
+END
+framing.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/framing.c
+END
+codebook.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/codebook.c
+END
+os.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/os.h
+END
+synthesis.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/synthesis.c
+END
+codebook.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/codebook.h
+END
+info.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/info.c
+END
+lsp_lookup.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/lsp_lookup.h
+END
+VorbisDecoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/381/trunk/gdx/jni/vorbis/VorbisDecoder.h
+END
+vorbisfile.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/vorbisfile.c
+END
+Android.mk
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/463/trunk/gdx/jni/vorbis/Android.mk
+END
+window_lookup.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/window_lookup.h
+END
+bitwise.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/bitwise.c
+END
+window.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/window.c
+END
+res012.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/res012.c
+END
+window.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/window.h
+END
+ivorbiscodec.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/ivorbiscodec.h
+END
+ogg.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/ogg.h
+END
+sharedbook.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/sharedbook.c
+END
+asm_arm.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/asm_arm.h
+END
+mdct_lookup.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/mdct_lookup.h
+END
+mdct.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/mdct.c
+END
+block.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/block.c
+END
+VorbisDecoder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1049/trunk/gdx/jni/vorbis/VorbisDecoder.cpp
+END
+mdct.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/170/trunk/gdx/jni/vorbis/mdct.h
+END
