@@ -60,11 +60,6 @@ public class BatchRectangleVertexBuffer extends VertexBuffer {
 		bufferData[6*pIndex] = x2;
 		bufferData[7*pIndex] = y2;
 
-		final FloatBuffer buffer = this.getFloatBuffer();
-		buffer.position(0);
-		buffer.put(bufferData);
-		buffer.position(0);
-
 		super.setHardwareBufferNeedsUpdate();
 	}
 

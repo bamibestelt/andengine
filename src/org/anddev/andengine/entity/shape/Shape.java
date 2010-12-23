@@ -495,9 +495,6 @@ public abstract class Shape extends Entity implements IShape {
 		if(this.mCullingEnabled == false || this.isCulled(pCamera) == false) {
 			
 			this.onInitDraw(pGL);
-			this.onApplyVertices(pGL);
-			pGL.glTranslatef(this.mX, this.mY, 0);
-			this.drawVertices(pGL, pCamera);
 			
 			// Set to identity matrix
 			/*
@@ -513,7 +510,6 @@ public abstract class Shape extends Entity implements IShape {
 			mPos.mul(transformMatrix);
 			*/
 			
-			/*
 			pGL.glPushMatrix();
 			{
 				this.onApplyVertices(pGL);
@@ -521,7 +517,6 @@ public abstract class Shape extends Entity implements IShape {
 				this.drawVertices(pGL, pCamera);
 			}
 			pGL.glPopMatrix();
-			*/
 		}
 	}
 

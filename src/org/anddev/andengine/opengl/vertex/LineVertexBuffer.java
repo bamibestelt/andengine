@@ -46,11 +46,6 @@ public class LineVertexBuffer extends VertexBuffer {
 		bufferData[2]  = pX2;
 		bufferData[3]  = pY2;
 
-		final FloatBuffer buffer = this.getFloatBuffer();
-		buffer.position(0);
-		buffer.put(bufferData);
-		buffer.position(0);
-
 		super.setHardwareBufferNeedsUpdate();
 	}
 

@@ -53,11 +53,6 @@ public class CircleVertexBuffer extends VertexBuffer {
 			bufferData[theta+1] = pRadius * FloatMath.sin((float)Math.toRadians(theta));
 		}
 
-		final FloatBuffer buffer = this.getFloatBuffer();
-		buffer.position(0);
-		buffer.put(bufferData);
-		buffer.position(0);
-
 		super.setHardwareBufferNeedsUpdate();
 	}
 

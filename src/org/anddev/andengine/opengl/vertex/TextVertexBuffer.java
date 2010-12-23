@@ -49,8 +49,8 @@ public class TextVertexBuffer extends VertexBuffer {
 
 	public void updateHardware()
 	{
-		final FloatBuffer vertexFloatBuffer = this.getFloatBuffer();
-		BufferUtils.copy(this.mBufferData, vertexFloatBuffer, vertexFloatBuffer.capacity(), 0);
+		//final FloatBuffer vertexFloatBuffer = this.getFloatBuffer();
+		//BufferUtils.copy(this.mBufferData, vertexFloatBuffer, vertexFloatBuffer.capacity(), 0);
 
 		super.setHardwareBufferNeedsUpdate();
 	}

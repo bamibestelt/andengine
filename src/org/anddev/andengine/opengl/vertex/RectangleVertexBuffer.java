@@ -56,9 +56,6 @@ public class RectangleVertexBuffer extends VertexBuffer {
 		bufferData[6] = pWidth;
 		bufferData[7] = pHeight;
 
-		final FloatBuffer buffer = this.getFloatBuffer();
-		BufferUtils.copy(bufferData, buffer, 8, 0);
-
 		super.setHardwareBufferNeedsUpdate();
 	}
 
