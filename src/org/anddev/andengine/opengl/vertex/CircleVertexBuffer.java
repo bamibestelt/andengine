@@ -1,7 +1,5 @@
 package org.anddev.andengine.opengl.vertex;
 
-import java.nio.FloatBuffer;
-
 import android.util.FloatMath;
 
 /**

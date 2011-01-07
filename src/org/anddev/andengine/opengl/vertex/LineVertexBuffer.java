@@ -1,6 +1,5 @@
 package org.anddev.andengine.opengl.vertex;
 
-import java.nio.FloatBuffer;
 
 /**
  * @author Nicolas Gramlich

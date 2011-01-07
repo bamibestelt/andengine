@@ -5,8 +5,6 @@ import java.util.HashSet;
 
 import javax.microedition.khronos.opengles.GL11;
 
-import android.util.Log;
-
 /**
  * @author Nicolas Gramlich
  * @since 17:48:46 - 08.03.2010

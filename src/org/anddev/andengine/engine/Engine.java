@@ -373,6 +373,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 	@Override
 	public boolean onTouch(final View pView, final MotionEvent pSurfaceMotionEvent) {
 		if(this.mRunning) {
+			/*
 			switch(pSurfaceMotionEvent.getAction())
 			{
 			case MotionEvent.ACTION_DOWN:
@@ -385,6 +386,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 				Log.v("Engine", "onTouch Move");
 				break;
 			}
+			*/
 			final boolean handled = this.mTouchController.onHandleMotionEvent(pSurfaceMotionEvent);
 			
 			// Only slow down the UI thread on ACTION_MOVE events
@@ -548,16 +550,14 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 	public void onDrawFrame(final GL10 pGL) throws InterruptedException {
 		
 		//final long t1 = System.nanoTime();
-		this.onTickUpdate();
+		
 		//final long t2 = System.nanoTime();
 		
 		//final float s1 = (float)((t2 - t1) * 1e-9);
 		//Log.v("Engine", "onTickUpdate took " + s1);
 		
 		//mThreadLocker.waitUntilCanDraw();
-		
-		pGL.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
-		
+				
 		//this.mTextureManager.updateTextures(pGL);
 		this.mFontManager.updateFonts(pGL);
 		if(GLHelper.EXTENSIONS_VERTEXBUFFEROBJECTS) {
@@ -566,6 +566,9 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 		
 		//final long t3 = System.nanoTime();
 		this.onDrawScene(pGL);
+		
+		this.onTickUpdate();
+		
 		//final long t4 = System.nanoTime();
 		
 		//final float s2 = (float)((t4 - t3) * 1e-9);

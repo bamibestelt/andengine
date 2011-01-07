@@ -275,6 +275,9 @@ public class Scene extends Entity {
 	@Override
 	protected void onManagedDraw(final GL10 pGL, final Camera pCamera) {
 		final Scene childScene = this.mChildScene;
+		
+		//pGL.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
+		
 		if(childScene == null || !this.mChildSceneModalDraw) {
 			if(this.mBackgroundEnabled) {
 				pCamera.onApplyPositionIndependentMatrix(pGL);
@@ -282,7 +285,7 @@ public class Scene extends Entity {
 
 				this.mBackground.onDraw(pGL, pCamera);
 			}
-
+			
 			pCamera.onApplyMatrix(pGL);
 			GLHelper.setModelViewIdentityMatrix(pGL);
 

@@ -3,8 +3,6 @@ package org.anddev.andengine.opengl.texture.buffer;
 import java.nio.FloatBuffer;
 
 import org.anddev.andengine.opengl.buffer.BufferObject;
-import org.anddev.andengine.opengl.font.Font;
-import org.anddev.andengine.opengl.font.Letter;
 
 import com.badlogic.gdx.utils.BufferUtils;
 

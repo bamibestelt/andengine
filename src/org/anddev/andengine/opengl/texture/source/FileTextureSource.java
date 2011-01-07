@@ -9,8 +9,8 @@ import org.anddev.andengine.util.Debug;
 import org.anddev.andengine.util.StreamUtils;
 
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Bitmap.Config;
+import android.graphics.BitmapFactory;
 
 /**
  * 

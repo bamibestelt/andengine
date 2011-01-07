@@ -20,7 +20,7 @@ public abstract class BaseSprite extends BaseRectangle {
 	// Fields
 	// ===========================================================
 
-	protected final BaseTextureRegion mTextureRegion;
+	protected BaseTextureRegion mTextureRegion;
 
 	// ===========================================================
 	// Constructors

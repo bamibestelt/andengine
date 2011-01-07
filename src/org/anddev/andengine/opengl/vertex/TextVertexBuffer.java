@@ -1,12 +1,6 @@
 package org.anddev.andengine.opengl.vertex;
 
-import java.nio.FloatBuffer;
-
-import org.anddev.andengine.opengl.font.Font;
-import org.anddev.andengine.opengl.font.Letter;
 import org.anddev.andengine.util.HorizontalAlign;
-
-import com.badlogic.gdx.utils.BufferUtils;
 
 /**
  * @author Nicolas Gramlich

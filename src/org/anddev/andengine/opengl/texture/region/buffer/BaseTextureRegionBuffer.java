@@ -2,13 +2,9 @@ package org.anddev.andengine.opengl.texture.region.buffer;
 
 import static org.anddev.andengine.opengl.vertex.RectangleVertexBuffer.VERTICES_PER_RECTANGLE;
 
-import java.nio.FloatBuffer;
-
 import org.anddev.andengine.opengl.buffer.BufferObject;
 import org.anddev.andengine.opengl.texture.Texture;
 import org.anddev.andengine.opengl.texture.region.BaseTextureRegion;
-
-import com.badlogic.gdx.utils.BufferUtils;
 
 /**
  * @author Nicolas Gramlich
@@ -150,9 +146,6 @@ public abstract class BaseTextureRegionBuffer extends BufferObject {
 				bufferData[7] = y2;
 			}
 		}
-
-		final FloatBuffer buffer = this.getFloatBuffer();
-		BufferUtils.copy(bufferData, buffer, buffer.capacity(), 0);
 
 		super.setHardwareBufferNeedsUpdate();
 	}

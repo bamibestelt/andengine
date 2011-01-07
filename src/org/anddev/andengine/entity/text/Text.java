@@ -55,7 +55,7 @@ public class Text extends BoundingBoxShape {
 	}
 
 	protected Text(final float pX, final float pY, final Font pFont, final String pText, final HorizontalAlign pHorizontalAlign, final int pCharactersMaximum) {
-		super(pX, pY, 0, 0, new TextVertexBuffer(pCharactersMaximum, pHorizontalAlign, GL11.GL_STATIC_DRAW));
+		super(pX, pY, 0, 0, new TextVertexBuffer(pCharactersMaximum, pHorizontalAlign, GL11.GL_DYNAMIC_DRAW));
 
 		this.mHorizontalAlign = pHorizontalAlign;
 		

@@ -6,6 +6,8 @@ import javax.microedition.khronos.opengles.GL11;
 
 import org.anddev.andengine.opengl.util.GLHelper;
 
+import android.util.Log;
+
 import com.badlogic.gdx.utils.BufferUtils;
 
 /**
@@ -105,6 +107,7 @@ public abstract class BufferObject {
 			//			Debug.d("BufferObject.updating: ID = "  + this.mHardwareBufferID);
 			this.mHardwareBufferNeedsUpdate = false;
 			BufferUtils.copy(mBufferData, mFloatBuffer, mFloatBuffer.capacity(), 0);
+			Log.v("BufferObject", "Copy");
 			pGL11.glBufferData(GL11.GL_ARRAY_BUFFER, mFloatBuffer.capacity()*4, mFloatBuffer, mDrawType);
 		}
 	}

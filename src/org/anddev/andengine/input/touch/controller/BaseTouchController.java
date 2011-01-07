@@ -5,7 +5,6 @@ import org.anddev.andengine.input.touch.TouchEvent;
 import org.anddev.andengine.util.pool.RunnablePoolItem;
 import org.anddev.andengine.util.pool.RunnablePoolUpdateHandler;
 
-import android.util.Log;
 import android.view.MotionEvent;
 
 /**

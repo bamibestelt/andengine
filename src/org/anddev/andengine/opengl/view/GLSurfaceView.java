@@ -29,7 +29,6 @@ import javax.microedition.khronos.opengles.GL;
 import javax.microedition.khronos.opengles.GL10;
 
 import android.content.Context;
-import android.content.pm.ConfigurationInfo;
 import android.graphics.PixelFormat;
 import android.opengl.GLDebugHelper;
 import android.util.AttributeSet;

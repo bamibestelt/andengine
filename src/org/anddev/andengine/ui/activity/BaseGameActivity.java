@@ -21,7 +21,6 @@ import org.anddev.andengine.util.Debug;
 
 import android.content.Context;
 import android.content.pm.ActivityInfo;
-import android.graphics.PixelFormat;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.PowerManager;
