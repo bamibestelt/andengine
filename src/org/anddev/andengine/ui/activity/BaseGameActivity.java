@@ -9,6 +9,7 @@ import org.anddev.andengine.engine.Engine.IEngineListener;
 import org.anddev.andengine.engine.options.EngineOptions;
 import org.anddev.andengine.engine.options.WakeLockOptions;
 import org.anddev.andengine.entity.scene.Scene;
+import org.anddev.andengine.opengl.view.GLSurfaceView;
 import org.anddev.andengine.opengl.view.RenderSurfaceView;
 import org.anddev.andengine.sensor.accelerometer.AccelerometerSensorOptions;
 import org.anddev.andengine.sensor.accelerometer.IAccelerometerListener;
@@ -208,6 +209,7 @@ public abstract class BaseGameActivity extends BaseActivity implements IGameInte
 		//this.mRenderSurfaceView.setEGLConfigChooser(8,8,8,0,0,0);
 		//this.mRenderSurfaceView.getHolder().setFormat(PixelFormat.RGBX_8888);
 		this.mRenderSurfaceView.setRenderer(this.mEngine);
+		//this.mRenderSurfaceView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
 
 		this.setContentView(this.mRenderSurfaceView, this.createSurfaceViewLayoutParams());
 	}

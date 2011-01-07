@@ -30,6 +30,7 @@ import org.anddev.andengine.opengl.texture.region.TextureRegion;
 import org.anddev.andengine.opengl.texture.region.TextureRegionFactory;
 import org.anddev.andengine.opengl.texture.source.ITextureSource;
 import org.anddev.andengine.opengl.util.GLHelper;
+import org.anddev.andengine.opengl.view.RenderSurfaceView;
 import org.anddev.andengine.sensor.SensorDelay;
 import org.anddev.andengine.sensor.accelerometer.AccelerometerData;
 import org.anddev.andengine.sensor.accelerometer.AccelerometerSensorOptions;
@@ -411,7 +412,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 	@Override
 	public boolean onTouchEvent(final TouchEvent pSurfaceTouchEvent) {
 		
-		Log.v("Engine", "onTouchEvent");
+		//Log.v("Engine", "onTouchEvent");
 		/*
 		 * Let the engine determine which scene and camera this event should be
 		 * handled by.
