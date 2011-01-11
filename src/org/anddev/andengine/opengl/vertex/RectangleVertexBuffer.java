@@ -1,5 +1,7 @@
 package org.anddev.andengine.opengl.vertex;
 
+import com.badlogic.gdx.utils.BufferUtils;
+
 
 /**
  * @author Nicolas Gramlich
@@ -39,20 +41,23 @@ public class RectangleVertexBuffer extends VertexBuffer {
 	// ===========================================================
 
 	public synchronized void update(final float pWidth, final float pHeight) {
-		final float[] bufferData = this.mBufferData;
+		//final float[] bufferData = this.mBufferData;
 		
-		bufferData[0] = 0;
-		bufferData[1] = 0;
+		mBufferData[0] = 0;
+		mBufferData[1] = 0;
 
-		bufferData[2] = 0;
-		bufferData[3] = pHeight;
+		mBufferData[2] = 0;
+		mBufferData[3] = pHeight;
 
-		bufferData[4] = pWidth;
-		bufferData[5] = 0;
+		mBufferData[4] = pWidth;
+		mBufferData[5] = 0;
 
-		bufferData[6] = pWidth;
-		bufferData[7] = pHeight;
+		mBufferData[6] = pWidth;
+		mBufferData[7] = pHeight;
 
+		//this.getFloatBuffer();
+		BufferUtils.copy(mBufferData, mFloatBuffer, mFloatBuffer.capacity(), 0);
+		
 		super.setHardwareBufferNeedsUpdate();
 	}
 

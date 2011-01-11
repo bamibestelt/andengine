@@ -27,13 +27,10 @@ public abstract class BufferObject {
 
 	// CPU Buffer
 	protected final float[] mBufferData; 
-	protected final float[] mBufferData2;
 
 	private final int mDrawType;
 
-	// Double buffering
-	private final FloatBuffer mFloatBuffer;
-	private final FloatBuffer mFloatBuffer2;
+	protected final FloatBuffer mFloatBuffer;
 
 	private int mHardwareBufferID = -1;
 	private boolean mLoadedToHardware;
@@ -46,9 +43,7 @@ public abstract class BufferObject {
 	public BufferObject(final int pCapacity, final int pDrawType) {
 		this.mDrawType = pDrawType;
 		this.mBufferData = new float[pCapacity];
-		this.mBufferData2 = new float[pCapacity];
 		this.mFloatBuffer = BufferUtils.newFloatBuffer(pCapacity);
-		this.mFloatBuffer2 = BufferUtils.newFloatBuffer(pCapacity);
 	}
 
 	// ===========================================================
@@ -88,6 +83,7 @@ public abstract class BufferObject {
 	// ===========================================================
 
 	public void setHardwareBufferNeedsUpdate(){
+		BufferUtils.copy(mBufferData, mFloatBuffer, mFloatBuffer.capacity(), 0);
 		this.mHardwareBufferNeedsUpdate = true;
 	}
 
@@ -106,8 +102,7 @@ public abstract class BufferObject {
 		if(this.mHardwareBufferNeedsUpdate) {
 			//			Debug.d("BufferObject.updating: ID = "  + this.mHardwareBufferID);
 			this.mHardwareBufferNeedsUpdate = false;
-			BufferUtils.copy(mBufferData, mFloatBuffer, mFloatBuffer.capacity(), 0);
-			Log.v("BufferObject", "Copy");
+			//BufferUtils.copy(mBufferData, mFloatBuffer, mFloatBuffer.capacity(), 0);
 			pGL11.glBufferData(GL11.GL_ARRAY_BUFFER, mFloatBuffer.capacity()*4, mFloatBuffer, mDrawType);
 		}
 	}

@@ -559,7 +559,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 		
 		//mThreadLocker.waitUntilCanDraw();
 				
-		//this.mTextureManager.updateTextures(pGL);
+		this.mTextureManager.updateTextures(pGL);
 		this.mFontManager.updateFonts(pGL);
 		if(GLHelper.EXTENSIONS_VERTEXBUFFEROBJECTS) {
 			this.mBufferObjectManager.updateBufferObjects((GL11) pGL);
