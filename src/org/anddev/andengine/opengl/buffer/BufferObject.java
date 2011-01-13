@@ -6,8 +6,6 @@ import javax.microedition.khronos.opengles.GL11;
 
 import org.anddev.andengine.opengl.util.GLHelper;
 
-import android.util.Log;
-
 import com.badlogic.gdx.utils.BufferUtils;
 
 /**

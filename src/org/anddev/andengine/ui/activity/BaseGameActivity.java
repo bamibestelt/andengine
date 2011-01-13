@@ -9,7 +9,6 @@ import org.anddev.andengine.engine.Engine.IEngineListener;
 import org.anddev.andengine.engine.options.EngineOptions;
 import org.anddev.andengine.engine.options.WakeLockOptions;
 import org.anddev.andengine.entity.scene.Scene;
-import org.anddev.andengine.opengl.view.GLSurfaceView;
 import org.anddev.andengine.opengl.view.RenderSurfaceView;
 import org.anddev.andengine.sensor.accelerometer.AccelerometerSensorOptions;
 import org.anddev.andengine.sensor.accelerometer.IAccelerometerListener;

@@ -2,8 +2,6 @@ package org.anddev.andengine.ui.activity;
 
 import org.anddev.andengine.opengl.view.RenderSurfaceView;
 
-import android.graphics.PixelFormat;
-
 /**
  * @author Nicolas Gramlich
  * @since 10:18:50 - 06.10.2010
