@@ -109,7 +109,10 @@ public class RenderSurfaceView extends GLSurfaceView {
 			Debug.d("onSurfaceChanged: pWidth=" + pWidth + "  pHeight=" + pHeight);
 			this.mEngine.setSurfaceSize(pWidth, pHeight);
 			pGL.glViewport(0, 0, pWidth, pHeight);
+			pGL.glMatrixMode(GL10.GL_PROJECTION);
 			pGL.glLoadIdentity();
+			float ratio = pWidth/pHeight;
+			pGL.glFrustumf(-ratio, ratio, -1, 1, 1, 10);
 			
 			this.mEngine.onSurfaceChanged(pWidth, pHeight);
 		}
@@ -124,15 +127,16 @@ public class RenderSurfaceView extends GLSurfaceView {
 			//			pGL.glHint(GL10.GL_POLYGON_SMOOTH_HINT, GL10.GL_NICEST);
 			//pGL.glEnable(GL10.GL_LINE_SMOOTH);
 			//pGL.glHint(GL10.GL_LINE_SMOOTH_HINT, GL10.GL_NICEST);
-			pGL.glEnable(GL10.GL_POINT_SMOOTH);
-			pGL.glHint(GL10.GL_POINT_SMOOTH_HINT, GL10.GL_NICEST);
+			//pGL.glEnable(GL10.GL_POINT_SMOOTH);
+			//pGL.glHint(GL10.GL_POINT_SMOOTH_HINT, GL10.GL_NICEST);
 
 			GLHelper.setShadeModelFlat(pGL);
 
 			GLHelper.disableLightning(pGL);
-			GLHelper.disableDither(pGL);
+			//GLHelper.disableDither(pGL);
 			GLHelper.disableDepthTest(pGL);
-			GLHelper.disableMultisample(pGL);
+			//GLHelper.disableMultisample(pGL);
+			GLHelper.enableMultisample(pGL);
 
 			GLHelper.enableBlend(pGL);
 			GLHelper.enableTextures(pGL);

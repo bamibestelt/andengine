@@ -14,6 +14,8 @@ import org.anddev.andengine.input.touch.TouchEvent;
 import org.anddev.andengine.opengl.util.GLHelper;
 import org.anddev.andengine.util.MathUtils;
 
+import android.util.Log;
+
 /**
  * @author Nicolas Gramlich
  * @since 10:24:18 - 25.03.2010
@@ -206,6 +208,7 @@ public class Camera implements IUpdateHandler {
 		GLHelper.setProjectionIdentityMatrix(pGL);
 
 		pGL.glOrthof(this.getMinX(), this.getMaxX(), this.getMaxY(), this.getMinY(), this.mNearZ, this.mFarZ);
+		//Log.v("Camera", String.format("glOrtho Min: %f,%f Max: %f,%f", this.getMinX(), this.getMinY(), this.getMaxX(), this.getMaxY()));
 
 		final float rotation = this.mRotation;
 		if(rotation != 0) {

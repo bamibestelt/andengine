@@ -35,6 +35,7 @@ public abstract class LayoutGameActivity extends BaseGameActivity {
 		super.setContentView(this.getLayoutID());
 
 		this.mRenderSurfaceView = (RenderSurfaceView) this.findViewById(this.getRenderSurfaceViewID());
+		this.mRenderSurfaceView.setEGLConfigChooser(false);
 		//this.mRenderSurfaceView.setDebugFlags(RenderSurfaceView.DEBUG_CHECK_GL_ERROR | RenderSurfaceView.DEBUG_LOG_GL_CALLS);
 		//this.mRenderSurfaceView.setEGLConfigChooser(8,8,8,0,0,0);
 		//this.mRenderSurfaceView.getHolder().setFormat(PixelFormat.RGBX_8888);

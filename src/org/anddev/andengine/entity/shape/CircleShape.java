@@ -4,7 +4,10 @@ import javax.microedition.khronos.opengles.GL10;
 
 import org.anddev.andengine.engine.camera.Camera;
 import org.anddev.andengine.opengl.buffer.BufferObjectManager;
+import org.anddev.andengine.opengl.vertex.CircleVertexBuffer;
 import org.anddev.andengine.opengl.vertex.VertexBuffer;
+
+import android.util.Log;
 
 public abstract class CircleShape extends Shape {
 	private float mCenterX;
@@ -14,7 +17,7 @@ public abstract class CircleShape extends Shape {
 	private VertexBuffer mVertexBuffer;
 	
 	public CircleShape(final float pCenterX, final float pCenterY, final float pRadius, final VertexBuffer pVertexBuffer) {
-		super(pCenterX - pRadius, pCenterY - pRadius);
+		super(pCenterX, pCenterY);
 		
 		this.mBaseRadius = pRadius;
 		this.mRadius = pRadius;
@@ -101,7 +104,9 @@ public abstract class CircleShape extends Shape {
 
 	@Override
 	protected void drawVertices(GL10 pGL, Camera pCamera) {
-		pGL.glDrawArrays(GL10.GL_TRIANGLE_FAN, 0, 360);
+		//Log.v("CircleShape", "Drawing arrays");
+		pGL.glDrawArrays(GL10.GL_LINE_LOOP, 0, CircleVertexBuffer.VERTICES_PER_CIRCLE);
+		//pGL.glDrawArrays(GL10.GL_TRIANGLE_FAN, 0, CircleVertexBuffer.VERTICES_PER_CIRCLE);
 	}
 
 }

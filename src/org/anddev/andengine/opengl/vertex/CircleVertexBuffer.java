@@ -11,7 +11,7 @@ public class CircleVertexBuffer extends VertexBuffer {
 	// Constants
 	// ===========================================================
 
-	public static final int VERTICES_PER_CIRCLE = 360;
+	public static final int VERTICES_PER_CIRCLE = 722;
 	
 	// ===========================================================
 	// Fields
@@ -41,15 +41,20 @@ public class CircleVertexBuffer extends VertexBuffer {
 
 		final float[] bufferData = this.mBufferData;
 
-		// Create 360 vertices
-		for(int theta = 0; theta <= VERTICES_PER_CIRCLE; theta += 2)
+		bufferData[0] = 0.0f;
+		bufferData[1] = 0.0f;
+		
+		for(int i = 0; i <= 720; i += 2)
 		{
 			// x value of vertex
-			bufferData[theta] = pRadius * FloatMath.cos((float)Math.toRadians(theta));
+			bufferData[i+2] = pRadius * FloatMath.cos((float)Math.toRadians(i/2));
 			
 			// y value of vertex
-			bufferData[theta+1] = pRadius * FloatMath.sin((float)Math.toRadians(theta));
+			bufferData[i+3] = pRadius * FloatMath.sin((float)Math.toRadians(i/2));
 		}
+		
+		//bufferData[720] = 0.0f;
+		//bufferData[721] = 1.0f;
 
 		super.setHardwareBufferNeedsUpdate();
 	}

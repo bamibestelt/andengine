@@ -54,6 +54,7 @@ import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -82,7 +83,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 
 	private final State mThreadLocker = new State();
 
-	//private final UpdateThread mUpdateThread = new UpdateThread();
+	private final UpdateThread mUpdateThread = new UpdateThread();
 
 	private final RunnableHandler mUpdateThreadRunnableHandler = new RunnableHandler();
 
@@ -150,7 +151,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 			this.initLoadingScreen();
 		}
 
-		//this.mUpdateThread.start();
+		this.mUpdateThread.start();
 	}
 	
 	public void setEngineListener(IEngineListener pEngineListener)
@@ -506,13 +507,13 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 			final long secondsElapsed = this.getNanosecondsElapsed();
 			
 			this.onUpdate(secondsElapsed);
-			//this.yieldDraw();
+			this.yieldDraw();
 		}
-		//else
-		//{
-		//	this.yieldDraw();
-		//	Thread.sleep(16);
-		//}
+		else
+		{
+			this.yieldDraw();
+			Thread.sleep(16);
+		}
 	}
 	
 	private void yieldDraw() throws InterruptedException {
@@ -547,15 +548,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 	}
 
 	public void onDrawFrame(final GL10 pGL) throws InterruptedException {
-		
-		//final long t1 = System.nanoTime();
-		
-		//final long t2 = System.nanoTime();
-		
-		//final float s1 = (float)((t2 - t1) * 1e-9);
-		//Log.v("Engine", "onTickUpdate took " + s1);
-		
-		//mThreadLocker.waitUntilCanDraw();
+		mThreadLocker.waitUntilCanDraw();
 				
 		this.mTextureManager.updateTextures(pGL);
 		this.mFontManager.updateFonts(pGL);
@@ -563,26 +556,17 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 			this.mBufferObjectManager.updateBufferObjects((GL11) pGL);
 		}
 		
-		//final long t3 = System.nanoTime();
 		this.onDrawScene(pGL);
-		
-		this.onTickUpdate();
-		
-		//final long t4 = System.nanoTime();
-		
-		//final float s2 = (float)((t4 - t3) * 1e-9);
-		//Log.v("Engine", "onDrawScene took " + s2);
-		
-		//mThreadLocker.notifyCanUpdate();
+
+		mThreadLocker.notifyCanUpdate();
 			
 	}
-
+	
 	protected void onDrawScene(final GL10 pGL) {
-		final Camera camera = this.getCamera();
+		pGL.glClear(GL10.GL_COLOR_BUFFER_BIT);	
+		this.mScene.onDraw(pGL, this.mCamera);
 
-		this.mScene.onDraw(pGL, camera);
-
-		camera.onDrawHUD(pGL);
+		this.mCamera.onDrawHUD(pGL);
 	}
 
 	private long getNanosecondsElapsed() {

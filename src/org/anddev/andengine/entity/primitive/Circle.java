@@ -43,6 +43,7 @@ public class Circle extends BaseCircle {
 		super.onInitDraw(pGL);
 		GLHelper.disableTextures(pGL);
 		GLHelper.disableTexCoordArray(pGL);
+		GLHelper.lineWidth(pGL, 1.0f);
 	}
 
 	// ===========================================================

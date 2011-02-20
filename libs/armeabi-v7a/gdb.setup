@@ -1,0 +1,2 @@
+set solib-search-path /Users/fuzzy/Documents/hexwave_android/AndEngine/obj/local/armeabi-v7a
+directory /opt/android-ndk-r5/platforms/android-4/arch-arm/usr/include /Users/fuzzy/Documents/hexwave_android/AndEngine/jni /Users/fuzzy/Documents/hexwave_android/AndEngine/jni/.. /opt/android-ndk-r5/sources/cxx-stl/system/include /opt/android-ndk-r5/sources/cxx-stl/system

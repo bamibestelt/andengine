@@ -276,8 +276,6 @@ public class Scene extends Entity {
 	protected void onManagedDraw(final GL10 pGL, final Camera pCamera) {
 		final Scene childScene = this.mChildScene;
 		
-		//pGL.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
-		
 		if(childScene == null || !this.mChildSceneModalDraw) {
 			if(this.mBackgroundEnabled) {
 				pCamera.onApplyPositionIndependentMatrix(pGL);
@@ -288,8 +286,12 @@ public class Scene extends Entity {
 			
 			pCamera.onApplyMatrix(pGL);
 			GLHelper.setModelViewIdentityMatrix(pGL);
-
-			this.drawLayers(pGL, pCamera);
+			
+			for(ILayer layer : this.mLayers)
+			{
+				layer.onDraw(pGL, pCamera);
+			}
+			
 		}
 		if(childScene != null) {
 			childScene.onDraw(pGL, pCamera);
@@ -516,18 +518,9 @@ public class Scene extends Entity {
 	}
 
 	private void updateLayers(final float pSecondsElapsed) {
-		final ILayer[] layers = this.mLayers;
-		final int layerCount = this.mLayerCount;
-		for(int i = 0; i < layerCount; i++) {
-			layers[i].onUpdate(pSecondsElapsed);
-		}
-	}
-
-	private void drawLayers(final GL10 pGL, final Camera pCamera) {
-		final ILayer[] layers = this.mLayers;
-		final int layerCount = this.mLayerCount;
-		for(int i = 0; i < layerCount; i++) {
-			layers[i].onDraw(pGL, pCamera);
+		for(int i = 0; i < this.mLayerCount; i++)
+		{
+			this.mLayers[i].onUpdate(pSecondsElapsed);
 		}
 	}
 
